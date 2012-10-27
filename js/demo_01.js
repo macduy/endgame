@@ -71,7 +71,7 @@ function animate() {
                     return function(t) {
                         this.textContent = interpolate(t);
                     };
-                });
+                })
             .transition().duration(800).ease('elastic')
                 .style('font-size', '30px')
                 .style('opacity', 1)

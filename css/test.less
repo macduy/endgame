@@ -1,0 +1,47 @@
+@container-colour: #dde;
+
+.-auto-center {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+body {
+    margin: 80px;
+}
+
+.ready {
+    color: #aaa;
+    margin-bottom: 20px;
+}
+
+.container {
+    .-auto-center;
+    display: block;
+    width: 300px;
+    padding: 30px 30px;
+    border-bottom: 2px solid darken(@container-colour, 10%);
+    background: @container-colour url("images/badge_rays.png") 50% -180px;
+    border-radius: 5px;
+
+    font-size: 2.5em;
+    font-family: "Myriad Pro", "Segoe UI", Helvetica;
+
+    * {
+        .-auto-center;
+    }
+
+    .image-holder {
+        img {
+            position: relative;
+        }
+    }
+
+    .accolades {
+        margin-top: 15px;
+    }
+}
+
+.score {
+    font-size: 100%;
+}

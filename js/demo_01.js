@@ -24,15 +24,12 @@ function reset() {
         .style('opacity', 0)
         .style('font-size', '0px')
         .style('-webkit-filter', 'blur(0px) brightness(0)')
-<<<<<<< HEAD
 
     // accolades
     d3.selectAll(".accolades img")
         .style('opacity', 0)
         .attr('width', 0)
         .style('-webkit-filter', 'saturate(0)')
-=======
->>>>>>> 62e9ed127354647d5a63bd7c057f346671c56ebe
 }
 
 // Animate - at the end of the animation, set finish to true
@@ -74,14 +71,13 @@ function animate() {
                     return function(t) {
                         this.textContent = interpolate(t);
                     };
-                })
+                });
             .transition().duration(800).ease('elastic')
                 .style('font-size', '30px')
                 .style('opacity', 1)
             // highlight and
             .transition().duration(100).delay(1300).ease('cubic-out')
                 .style('-webkit-filter', 'blur(1px) brightness(1)')
-<<<<<<< HEAD
                 .style('font-size', '60px')
             .transition().duration(750).delay(1500).ease('cubic-in-out')
                 .style('-webkit-filter', 'blur(0px) brightness(0)')
@@ -106,25 +102,10 @@ function animate() {
                     finished = true;
                     animating =false;
                 });
-=======
-                .style('font-size', '40px')
-            .transition().duration(750).delay(1500).ease('cubic-in-out')
-                .style('-webkit-filter', 'blur(0px) brightness(0)')
-                .style('font-size', '30px')
-        ;
-    }
-
-    animate_container().each('end', function() {
-        animate_badge().each('end', function() {
-            animate_score().each('end', function() {
-                finished = true;
-                animating =false;
->>>>>>> 62e9ed127354647d5a63bd7c057f346671c56ebe
             });
         });
     });
 }
-
 
 $(document).ready(function() {
     reset();
